@@ -59,17 +59,17 @@ public class Array
 	// 2 5 8 11
 	// 3 6 9 12
 	public int[][] getColumnMajorRectangle(int column, int row)
-	{
-		int [][] a = new int[row][column];
-		int count=1;
-		for(int r=0;r<row;r++){
-			for(int c=0;c<column;c++){
-				a[c][r]=count;
-				count++;
-			}
-		}
-		return a;
-	}
+{
+    int [][] a = new int[row][column];  // Notice the correct row and column dimensions
+    int count = 1;
+    for (int r = 0; r < row; r++) {
+        for (int c = 0; c < column; c++) {
+            a[r][c] = count;  // Corrected index assignment
+            count++;
+        }
+    }
+    return a;
+}
 
 	// Please note that each digit occupies two spaces and there is a space between
 	// them.
